@@ -1,7 +1,5 @@
 # workflows
 
-[![call-r-cmd-check](https://github.com/nmfs-stock-synthesis/workflows/actions/workflows/call-r-cmd-check.yml/badge.svg)](https://github.com/nmfs-stock-synthesis/workflows/actions/workflows/call-r-cmd-check.yml)
-
 ## What is in workflows?
 
 This repo contains a [collection of reusable workflows](https://github.com/nmfs-stock-synthesis/workflows/tree/main/.github/workflows) found helpful for the SS3 project. 
