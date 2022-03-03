@@ -20,7 +20,7 @@ jobs:
       - name: Get the link to the latest release (including version number)
         id: get-link-to-release
         run: |
-          $link_to_release = (curl https://api.github.com/repos/nmfs-stock-synthesis/stock-synthesis/releases/latest | grep "html_url" | grep 'releases' | grep -Eo 'https://[^\"]*')
+          link_to_release=$(curl https://api.github.com/repos/nmfs-stock-synthesis/stock-synthesis/releases/latest | grep "html_url" | grep 'releases' | grep -Eo 'https://[^\"]*')
           echo "::set-output name=link_to_release::${link_to_release}"
 
       - name: Print output
