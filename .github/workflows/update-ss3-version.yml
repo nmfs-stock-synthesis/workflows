@@ -21,7 +21,6 @@ jobs:
         run: ls
 
       - name: Move exes to the right location
-      (inst/bin/Linux64, inst/bin/Windows64, inst/bin/MacOS)
         run: |
           mv ss_linux inst/bin/Linux64/ss
           mv ss_win.exe inst/bin/Windows64/ss.exe
