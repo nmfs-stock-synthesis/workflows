@@ -40,8 +40,10 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          commit-message: 'Update ss3 binaries:\nFrom ${{ steps.get-link-to-release.outputs.link_to_release }}'
-          branch: update-ss3-test-3
+          commit-message: |
+            Update ss3 binaries
+            From ${{ steps.get-link-to-release.outputs.link_to_release }}
+          branch: update-ss3-test-4
           title: 'Update ss3 binaries'
           body: |
 
