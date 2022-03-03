@@ -21,8 +21,7 @@ jobs:
         id: get-link-to-release
         run: |
           link_to_release=$(curl https://api.github.com/repos/nmfs-stock-synthesis/stock-synthesis/releases/latest | grep "html_url" | grep 'releases' | grep -Eo 'https://[^\"]*')
-          echo "::set-output name=link_to_release::$(link_to_release)"
-
+          echo "::set-output name=link_to_release::${link_to_release}"
 
       - name: Move exes to the right location
         run: |
@@ -42,7 +41,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           commit-message: 'Update ss3 binaries: ${{ steps.get-link-to-release.outputs.link-to-release}}'
-          branch: update-ss3-test
+          branch: update-ss3-test-2
           title: 'Update ss3 binaries'
           body: |
 
