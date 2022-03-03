@@ -20,12 +20,26 @@ jobs:
       - name: Look at the wd
         run: ls
 
-      #- name: Move exes to the right location (inst/bin/Linux64, inst/bin/Windows64, inst/bin/MacOS)
+      - name: Move exes to the right location
+      (inst/bin/Linux64, inst/bin/Windows64, inst/bin/MacOS)
+        run: |
+          mv ss_linux inst/bin/Linux64/ss
+          mv ss_win.exe inst/bin/Windows64/ss.exe
+          mv ss_osx inst/bin/MacOS/ss
+          rm ss_opt_osx
+          rm ss_opt_linux
+          rm ss_opt_win.exe
 
-      # - name: Change permissions for mac and linux exes
-        # run: |
-        #   chmod a+x inst/bin/Linux64/ss
-        #   chmod a+x inst/bin/MacOS/ss
+      - name: look at where files are
+        run: ls
+
+      - name: check git
+        run: git status
+
+      - name: Change permissions for mac and linux exes
+        run: |
+          chmod a+x inst/bin/Linux64/ss
+          chmod a+x inst/bin/MacOS/ss
 
       # - name: Create Pull Request
       #   uses: peter-evans/create-pull-request@v3
