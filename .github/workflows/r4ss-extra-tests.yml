@@ -5,9 +5,9 @@ on:
   workflow_call:
     inputs:
       run-codecov:
-       required: false
-       type: boolean
-       default: false
+        required: false
+        type: boolean
+        default: false
 
 name: run-tests
 jobs:
