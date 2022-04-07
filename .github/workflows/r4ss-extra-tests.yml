@@ -90,8 +90,6 @@ jobs:
           sudo chmod a+x ss
           mv ss inst/extdata/simple_3.24/ss
           
-      - name: download codecov dependency if needed
-
       - name: Test
         env:
           _R_CHECK_CRAN_INCOMING_REMOTE_: false
