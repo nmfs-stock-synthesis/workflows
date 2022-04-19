@@ -58,8 +58,21 @@ jobs:
         run: |
           chmod a+x inst/bin/Linux64/ss
           chmod a+x inst/bin/MacOS/ss
-
+          
+      - name: check on which files have changed
+        id: check-files-changed
+        run: |
+          changed_bins=$(git diff --name-only HEAD | grep "bin")
+          length_changed_bins=${#changed_bins}
+          logical_bins_changed=$(if [ length_changed_bins>0 ]; then echo 1; else echo 0; fi)
+          echo "::set-output name=logical_bins_changed::${logical_bins_changed}"
+      
+      - name: check output
+        run: |
+          echo ${steps.check-files-changed.output.logical_bins_changed}
+          
       - name: Create Pull Request
+        if: steps.check-files-changed.outputs.logical_bins_changed
         uses: peter-evans/create-pull-request@v3
         with:
           commit-message: |
