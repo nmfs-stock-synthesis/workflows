@@ -66,10 +66,6 @@ jobs:
           length_changed_bins=${#changed_bins}
           logical_bins_changed=$(if [ length_changed_bins>0 ]; then echo 1; else echo 0; fi)
           echo "::set-output name=logical_bins_changed::${logical_bins_changed}"
-      
-      - name: check output
-        run: |
-          echo ${steps.check-files-changed.output.logical_bins_changed}
           
       - name: Create Pull Request
         if: steps.check-files-changed.outputs.logical_bins_changed
