@@ -48,8 +48,8 @@ jobs:
         if: matrix.config.os == 'ubuntu-latest'
         run: |
           sudo mv admb /usr/local/bin
-          sudo chmod 755 /usr/local/bin/admb/bin/admb
-          echo "/usr/local/bin/admb/bin" >> $GITHUB_PATH
+          sudo chmod 755 /usr/local/bin/admb
+          echo "/usr/local/bin/admb" >> $GITHUB_PATH
 
           
       - name: Set up R
