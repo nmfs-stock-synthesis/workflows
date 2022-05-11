@@ -41,15 +41,16 @@ jobs:
       - name: compile admb
         run: |
           cd admb && make 
+      - name: see where admb is
+        run: |
+          cd admb && ls -l
       - name: put admb in path, linux
         if: matrix.config.os == 'ubuntu-latest'
         run: |
           sudo mv admb /usr/local/bin
           sudo chmod 755 /usr/local/bin/admb/bin/admb
           echo "/usr/local/bin/admb/bin" >> $GITHUB_PATH
-      - name: see where admb is
-        run: |
-          cd /usr/local/bin && ls
+
           
       - name: Set up R
         uses: r-lib/actions/setup-r@master
