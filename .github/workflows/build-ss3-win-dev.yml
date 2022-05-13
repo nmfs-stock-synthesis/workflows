@@ -28,7 +28,7 @@ jobs:
         with:
           repository: admb-project/admb
           path: admb
-          ref: dev
+          ref: admb-13.0
       - name: see where it is
         run: |
           pwd
