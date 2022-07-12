@@ -54,12 +54,12 @@ jobs:
         run: |
           rm -rf SS330
           mkdir SS330
-          /bin/bash ./Make_SS_330_new.sh -b SS330
+          /bin/bash ./Make_SS_330_new.sh -b SS330 -o
 
       - name: move exes, scripts to needed locations
         run: |
           mv test-models-repo/models test-models-repo/model_runs
-          mv SS330/ss test-models-repo/model_runs/ss
+          mv SS330/ss_opt test-models-repo/model_runs/ss
 
       - name: change permissions on ss exes
         run: chmod a+x test-models-repo/model_runs/ss
