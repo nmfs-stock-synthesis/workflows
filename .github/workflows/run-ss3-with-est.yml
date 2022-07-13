@@ -154,6 +154,6 @@ jobs:
         uses: actions/upload-artifact@main
         if: always()
         with:
-          name: 'result_textfiles'
-          path: test-models-repo/run_R/
+          name: 'result_files'
+          path: test-models-repo/model_runs
 
