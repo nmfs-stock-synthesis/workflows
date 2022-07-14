@@ -2,7 +2,7 @@
 
 ## What is in workflows?
 
-This repo contains a [collection of reusable workflows](https://github.com/nmfs-stock-synthesis/workflows/tree/main/.github/workflows) found helpful for the SS3 project. 
+This repo contains a [collection of reusable workflows](https://github.com/nmfs-stock-synthesis/workflows/tree/main/.github/workflows) found helpful for the SS3 project. See [details on what these workflows do](https://docs.google.com/document/d/1hniPVEobdzEQqdIsAiHavZgze70TgGQzYiwP7T4SUWw/edit?usp=sharing).
 
 Looking for reusable workflows for R projects? These are now in [nmfs-fish-tools/ghactions4r](https://github.com/nmfs-fish-tools/ghactions4r).
 
